@@ -1,0 +1,160 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+
+}
+body {
+    background-color: rgb(251, 206, 133);
+  }
+  .header{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    z-index: 30;
+  }
+  i{
+    position: fixed;
+    top: 0px;
+    left: 4px;
+    font-size: 45px;
+    color: black;
+  }
+  .sec {
+    width: auto;
+    padding: 0 20px;
+  }
+  .pageSubTitle {
+    font-size: 120px;
+    line-height: 1.75;
+    font-weight: 900;
+    font-style: normal;
+    position: relative;
+  }
+  .pageSubTitle::after {
+    content: "";
+    display: block;
+    width: 74.6px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 35.2px;
+  }
+  .pageSubTitle > span {
+    display: block;
+    font-size: 13px;
+    line-height: 1.75;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5px;
+  }
+  .pageSubTitle--center {
+    text-align: center;
+  }
+  
+  /* FAQパーツ */
+  .pageSubTitle2 {
+    font-size: 23px;
+    line-height: 1.7;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+  }
+  .contentText {
+    font-size: 23px;
+    line-height: 1.7;
+    font-weight: 400;
+    font-style: normal;
+    color: #4D4D4D;
+  }
+  .qa {
+    padding-top: 180px;
+    padding-bottom: 278px;
+  }
+  .qa__box {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+  .qa__box > dl > dt {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    position: relative;
+  }
+  .qa__box > dl > dt .crossBar {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+  }
+  .qa__box > dl > dt .crossBar::before {
+    content: "";
+    display: inline-block;
+    width: 1.6px;
+    height: 100%;
+    background-color: #4D4D4D;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: center center; /* 中心を基準にtransform */
+    transform: translateX(-50%) rotate(0deg);
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .qa__box > dl > dt .crossBar::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1.6px;
+    background-color: #4D4D4D;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  .qa__box > dl > dt > span {
+    font-size: 28px;
+    line-height: 1.75;
+    font-weight: 500;
+    font-style: normal;
+    color: #5FB1DE;
+    margin-right: 23px;
+  }
+  
+  .qa__box > dl > dd {
+    margin: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 0px 30px; /* paddingの上下を0にする */
+    max-height: 0; /* max-heightを0にする、レスポンシブ対応 */
+    overflow: hidden;  /* overflow: hidden;を付けるのがポイント */
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+  .qa__box > dl > dd > span {
+    font-size: 28px;
+    line-height: 1.7;
+    font-weight: 500;
+    font-style: normal;
+    color: #5FB1DE;
+    margin-right: 23px;
+  }
+  
+  
+  /* アニメーション後のスタイル */
+  .qa__box > dl > dd.is-open { /* heightとpaddingをアニメーション */
+    max-height: 100px;
+    padding: 10px 30px;
+  }
+  /* ＋ボタンのアニメーション */
+  .qa__box > dl > dt.is-open .crossBar::before {
+    transform: translateX(-50%) rotate(90deg);  /* 90度回転 */
+  }
