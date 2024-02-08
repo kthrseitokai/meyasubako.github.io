@@ -151,7 +151,7 @@ body {
   
   /* アニメーション後のスタイル */
   .qa__box > dl > dd.is-open { /* heightとpaddingをアニメーション */
-    max-height: 200px;
+    max-height: 300px;
     padding: 10px 30px;
   }
   /* ＋ボタンのアニメーション */
